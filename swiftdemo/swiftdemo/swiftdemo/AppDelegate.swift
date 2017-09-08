@@ -13,9 +13,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    /**
+     1.知道swift中有命名空间
+     在同一个命名空间下 全局共享
+     第三方框架最好使用cocoapods 
+     
+     2. 为了封装 解耦
+        搜索反射机制和工厂方法
+     
+     
+     
+     **/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow()
+        
+        window?.backgroundColor = UIColor.white
+        
+        print(Bundle.main.infoDictionary )
+        
+        //获取 info.plist 里面的 CFBundleName的值 并转化为字符串 
+//        let ns = Bundle.main.namespace()
+//        let clsName = Bundle.main.namespace() + "." + "ViewController"
+
+        // 反射 机制  抽取对象函数 获取命名空间
+        let clsName = Bundle.main.namespace + "." + "ViewController"
+        
+        let cls = NSClassFromString(clsName) as? UIViewController.Type
+        let vc = cls?.init()
+        
+//        let vc = ViewController()
+        
+        window?.rootViewController = vc
+        
+        window?.makeKeyAndVisible()
+        
+        
+        
         return true
     }
 
