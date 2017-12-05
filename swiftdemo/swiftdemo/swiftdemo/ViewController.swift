@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,8 @@ class ViewController: UIViewController {
 //    lazy var label:DemoView = DemoView()
     
     private lazy var label:UILabel = UILabel()
-    
+    private lazy var centerview:UIView = UIView()
+
 //    lazy var label = { () -> DemoView in
 //        
 //        let l = DemoView()
@@ -35,7 +37,18 @@ class ViewController: UIViewController {
 //        setupUI()
 
     }
-
+    
+    private func test1(){
+        centerview.backgroundColor = UIColor.red
+        self.view.addSubview(centerview)
+        centerview.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(100)
+            make.height.equalTo(100)
+            make.center.equalTo(self.view)
+        }
+        
+    }
+    
     private lazy var p = Person()
     private func test(){
 //        let p = Person()
@@ -62,6 +75,8 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
+    
+    
     
     
     

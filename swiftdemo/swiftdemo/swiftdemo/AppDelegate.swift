@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pods_swiftdemo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,16 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      2. 为了封装 解耦
         搜索反射机制和工厂方法
      
-     
+    
      
      **/
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow()
         
         window?.backgroundColor = UIColor.white
         
-        print(Bundle.main.infoDictionary )
+        print(Bundle.main.infoDictionary)
         
         //获取 info.plist 里面的 CFBundleName的值 并转化为字符串 
 //        let ns = Bundle.main.namespace()
@@ -47,7 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()
-        
         
         
         return true
