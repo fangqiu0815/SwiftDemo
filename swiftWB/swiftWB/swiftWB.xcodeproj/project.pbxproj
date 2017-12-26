@@ -14,6 +14,9 @@
 		6D314F361FD5252B0005A43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D314F341FD5252B0005A43D /* LaunchScreen.storyboard */; };
 		6D314F411FD5252B0005A43D /* swiftWBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D314F401FD5252B0005A43D /* swiftWBTests.swift */; };
 		6D314F4C1FD5252B0005A43D /* swiftWBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D314F4B1FD5252B0005A43D /* swiftWBUITests.swift */; };
+		6D5034201FD945F100D12B6F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50341F1FD945F100D12B6F /* Person.swift */; };
+		6D5034221FD949F900D12B6F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5034211FD949F900D12B6F /* Student.swift */; };
+		6DEAE2B91FDFD4450008B5E9 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEAE2B81FDFD4450008B5E9 /* NewPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		6D314F471FD5252B0005A43D /* swiftWBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftWBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D314F4B1FD5252B0005A43D /* swiftWBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftWBUITests.swift; sourceTree = "<group>"; };
 		6D314F4D1FD5252B0005A43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D50341F1FD945F100D12B6F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6D5034211FD949F900D12B6F /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		6DEAE2B81FDFD4450008B5E9 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				6D314F5A1FD525440005A43D /* Other */,
 				6D314F2B1FD5252B0005A43D /* AppDelegate.swift */,
 				6D314F2D1FD5252B0005A43D /* ViewController.swift */,
+				6D50341F1FD945F100D12B6F /* Person.swift */,
+				6DEAE2B81FDFD4450008B5E9 /* NewPerson.swift */,
+				6D5034211FD949F900D12B6F /* Student.swift */,
 				6D314F2F1FD5252B0005A43D /* Main.storyboard */,
 				6D314F321FD5252B0005A43D /* Assets.xcassets */,
 				6D314F341FD5252B0005A43D /* LaunchScreen.storyboard */,
@@ -275,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEAE2B91FDFD4450008B5E9 /* NewPerson.swift in Sources */,
+				6D5034201FD945F100D12B6F /* Person.swift in Sources */,
 				6D314F2E1FD5252B0005A43D /* ViewController.swift in Sources */,
 				6D314F2C1FD5252B0005A43D /* AppDelegate.swift in Sources */,
+				6D5034221FD949F900D12B6F /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
