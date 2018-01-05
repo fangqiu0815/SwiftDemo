@@ -71,10 +71,16 @@ class YWVisitorView: UIView {
     //小房子
     fileprivate lazy var houseIconView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
     //提示标签
-    fileprivate lazy var tipLabel:UILabel = UILabel.yw_label(withText: "关注一些人，回这里看看有什么惊喜", fontSize: 14, color: UIColor.darkGray)
-
+    fileprivate lazy var tipLabel:UILabel = UILabel.yw_label(
+        withText: "关注一些人，回这里看看有什么惊喜",
+        fontSize: 14,
+        color: UIColor.darkGray)
+    
     //遮罩
     fileprivate lazy var maskIconView = UIImageView(image: UIImage(named:"visitordiscover_feed_mask_smallicon"))
+    
+    
+    
     
 }
 
@@ -125,5 +131,8 @@ extension YWVisitorView {
         addConstraint(NSLayoutConstraint(item: maskIconView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0))
         addConstraint(NSLayoutConstraint(item: maskIconView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0))
         addConstraint(NSLayoutConstraint(item: maskIconView, attribute: .bottom, relatedBy: .equal, toItem: registerBtn, attribute: .top, multiplier: 1.0, constant: -margin))
+        
+        
+        
     }
 }
