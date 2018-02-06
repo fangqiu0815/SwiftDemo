@@ -1,0 +1,12 @@
+ platform :ios, '9.0'
+
+target ‘FQBaiSiProject’ do
+  use_frameworks!
+
+pod 'Kingfisher'
+pod 'Alamofire', '~> 4.4'
+pod 'KYCircularProgress'
+pod 'SnapKit'
+pod 'GrowingTextView'
+pod 'AFNetworking'
+end

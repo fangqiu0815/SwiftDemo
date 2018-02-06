@@ -53,10 +53,12 @@ class YWVisitorView: UIView {
     
     
     
+    /// 开启动画旋转
+    // MARK: - 开启动画旋转
     fileprivate func startAnimation(){
     
         let anim = CABasicAnimation(keyPath: "transform.rotation")
-        anim.toValue = 2 * M_PI
+        anim.toValue = 2 * Double.pi
         anim.repeatCount = MAXFLOAT
         anim.duration = 15
         //完成之后是否删除 如果iconView 被释放 动画会一起销毁

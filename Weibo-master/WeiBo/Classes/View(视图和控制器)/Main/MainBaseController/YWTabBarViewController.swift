@@ -104,20 +104,30 @@ class YWTabBarViewController: UITabBarController {
     //设置所有子控制器
     private func steupChildControllers() {
         
-        let array: [[String:Any]] = [
-            ["clsName":"YWHomeViewController","title":"首页","imageName":"home","visitorInfo" : ["imageName": "","message":"关注一些人，回这里看看有什么惊喜"]],
-            ["clsName":"YWMessageViewController","title":"消息","imageName":"message_center","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
-            ["clsName":"UIViewcontroller"],
-            ["clsName":"YWDiscoverViewController","title":"发现","imageName":"discover","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，最新、最热的微博尽在掌握中，不会再于实事潮流擦肩而过"]],
-            ["clsName":"YWProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
-        ]
+        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
+            let data = NSData(contentsOfFile: path),
+            let array = try?JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String:Any]]
+            else{
+            return
+        }
+        
+        
+//        let array: [[String:Any]] = [
+//            ["clsName":"YWHomeViewController","title":"首页","imageName":"home","visitorInfo" : ["imageName": "","message":"关注一些人，回这里看看有什么惊喜"]],
+//            ["clsName":"YWMessageViewController","title":"消息","imageName":"message_center","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
+//            ["clsName":"UIViewcontroller"],
+//            ["clsName":"YWDiscoverViewController","title":"发现","imageName":"discover","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，最新、最热的微博尽在掌握中，不会再于实事潮流擦肩而过"]],
+//            ["clsName":"YWProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
+//        ]
         //测试数据格式是否正确 转换成plist 数据更加直观
         //(array as NSArray) .write(toFile: "/Users/yaowei/Desktop/demo.plist", atomically: true)
+//        let data = try!JSONSerialization.data(withJSONObject: array, options: .prettyPrinted)
+//        (data as NSData).write(toFile: "/Users/apple/Desktop/main.json", atomically: true)
         
         
         var viewControllerArr = [UIViewController]()
         
-        for dic in array {
+        for dic in array! {
             viewControllerArr.append(controller(dic: dic))
         }
         

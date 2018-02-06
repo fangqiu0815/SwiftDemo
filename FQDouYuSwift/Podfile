@@ -1,0 +1,11 @@
+platform :ios, ‘8.0’
+use_frameworks!
+target 'FQDouYuSwift' do
+    pod 'Alamofire'
+    pod 'Kingfisher'
+    pod 'SnapKit'
+    pod 'pop'
+    pod 'JHPullToRefreshKit'
+    pod 'FMDB'
+    pod 'SVProgressHUD'
+end

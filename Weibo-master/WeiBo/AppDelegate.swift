@@ -56,6 +56,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate
+{
+    private func loadAppInfo(){
+        
+        // 模拟异步
+        DispatchQueue.global().async {
+            let url = Bundle.main.url(forResource: "", withExtension: nil)
+            let data = NSData(contentsOf: url!)
+            // 写入磁盘
+            let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            
+            let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+            
+            data?.write(toFile: jsonPath, atomically: true)
+            
+        }
+    }
+}
+
+
 
 extension AppDelegate {
     
