@@ -35,8 +35,27 @@ enum ContentType: Int {
     case video = 41
 }
 
+// MARK: - 打印方法
+func printLog<T>(_ message:T,
+                       file: String = #file,
+                       method: String = #function,
+                       line: Int = #line) {
+        #if DEBUG
+        print("\((file as NSString).lastPathComponent)[\(line)],\(method):\(message)")
+        #endif
+    
+}
 
-
+// MARK: - 字典转json
+func dictionaryChangeJSON(dic: NSDictionary) -> NSString {
+    do {
+        let tpDic = try JSONSerialization.data(withJSONObject: dic, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let changeStr = NSString(data: tpDic, encoding: String.Encoding.utf8.rawValue)
+        return changeStr!
+    } catch {
+        fatalError("转换失败:\(error)")
+    }
+}
 
 
 

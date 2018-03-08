@@ -36,6 +36,7 @@ class YWOAuthViewController: UIViewController {
         guard let url = URL(string: urlString) else{
             return
         }
+        
         let request = URLRequest(url: url)
 //        webView.load(request)
 //        webView.navigationDelegate = self
